@@ -1,9 +1,11 @@
 import React from 'react'
 import Dev from '../components/Dev'
-const products = () => {
+
+const About  = () => {
   return (
-    <div><Dev></Dev></div>
+    <Dev></Dev>
   )
 }
 
-export default products
+export default Dev
+
