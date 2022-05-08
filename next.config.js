@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images:{
-    domains: ['localhost:3000']
+    domains: ['localhost:3000','metalage.net']
   },
   
 }
