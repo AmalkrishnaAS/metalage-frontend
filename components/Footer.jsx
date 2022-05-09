@@ -29,7 +29,7 @@ const Footer = () => {
                         2022 <span className="font-semibold">Metalage</span>
                     </p>
                     <div className="border-l border-gray-800 pl-2 ml-2">
-                        <p className="text-base leading-4 text-gray-800"> &copy; All rightss reserved</p>
+                        <p className="text-base leading-4 text-gray-800"> &copy; All rights reserved</p>
                     </div>
                 </div>
             </div>
