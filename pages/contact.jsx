@@ -50,8 +50,9 @@ const contact = () => {
         
         
     </div>
-  
+  <div className='mx-5 md:mx-0'>
   <Contact></Contact>
+  </div>
   
         <Footer></Footer>
         

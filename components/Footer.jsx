@@ -1,5 +1,6 @@
 import React from "react";
 import { FaYoutube,FaFacebook } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -10,10 +11,13 @@ const Footer = () => {
                    <h1 className="font-bold text-3xl mb-12 uppercase">Metalage</h1>
                 </div>
                 <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
-                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800">About</p>
-                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800">Contact us</p>
-                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800">Products</p>
-                    <p className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800">Admin? Click Here to Login</p>
+                 <a className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/about">About</a>
+                    <Link className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/products">Products</Link>
+                    <Link className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/contact">Contact</Link>
+                    <Link className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/">Home</Link>
+                    <Link className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="https://aqueous-retreat-57087.herokuapp.com/admin">Login</Link>
+                    
+
                 </div>
                 <div className="flex items-center gap-x-8 mt-6">
                     <div className="cursor-pointer">
