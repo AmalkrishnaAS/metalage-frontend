@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 //import aos
-import AOS from 'aos'
+import AOS from '../components/lib/aos'
 import 'aos/dist/aos.css'
 import {useEffect} from 'react'
 
