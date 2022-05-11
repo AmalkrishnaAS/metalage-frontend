@@ -1,9 +1,54 @@
 import React from 'react'
 import { DownloadIcon } from '@heroicons/react/outline'
+import { motion } from 'framer-motion'
+
+
 
 const Hero = () => {
+
+  const heroVariants={
+    hidden:{
+      opacity:0,
+      y:40
+     
+      
+      
+    },
+    visible:{
+      opacity:1,
+      y:0,
+    
+      
+      transition:{
+        delay:0.5,
+        duration:1,
+        ease:'easeInOut'
+
+
+
+  }
+
+    }
+  }
   return (
-    <div className='text-black hero min-h-[500px] h-3/4 md:flex items-center justify-center'><div class='flex items-center flex-col justify-around  h-[70%] sm:h-[55%]'><div className='text-center w-[90%] text-white mt-20 md:mt-6'><h1 className='uppercase text-3xl mb-6 font-bold mt-12 sm:mt-0'>metalage technologies</h1> <p className='text-xl'>Providing Quality Food Processing Equipments since 2008</p></div><button class="group [transform:translateZ(0)] px-6 py-3 rounded-lg overflow-hidden bg-gray-200 relative before:absolute before:bg-red-600 before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:rounded-full before:scale-[0] before:opacity-0 hover:before:scale-[6] hover:before:opacity-100 before:transition before:ease-in-out before:duration-500 flex mt-6 md:mt-0"><span class=" relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500 uppercase flex justify-center items-center "> Brochure <DownloadIcon className='h-6 ml-2'></DownloadIcon> </span></button ></div></div>
+    <div className="hero h-3/4 min-h-[500px] items-center justify-center text-black md:flex">
+      <motion.div class="flex h-[70%] flex-col items-center  justify-around sm:h-[55%]" variants={heroVariants} initial={'hidden'} animate={'visible'}>
+        <div className="mt-20 w-[90%] text-center text-white md:mt-6">
+          <h1 className="mb-6 mt-12 text-3xl font-bold uppercase sm:mt-0">
+            metalage technologies
+          </h1>{' '}
+          <p className="text-xl">
+            Providing Quality Food Processing Equipments since 2008
+          </p>
+        </div>
+        <button class="group relative mt-6 flex overflow-hidden rounded-lg bg-gray-200 px-6 py-3 [transform:translateZ(0)] before:absolute before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:scale-[0] before:rounded-full before:bg-red-600 before:opacity-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-[6] hover:before:opacity-100 md:mt-0">
+          <span class=" relative z-0 flex items-center justify-center uppercase text-black transition duration-500 ease-in-out group-hover:text-gray-200 ">
+            {' '}
+            Brochure <DownloadIcon className="ml-2 h-6"></DownloadIcon>{' '}
+          </span>
+        </button>
+      </motion.div>
+    </div>
   )
 }
 
