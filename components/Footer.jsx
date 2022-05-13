@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="flex flex-col items-center justify-center">
                 <div>
                     
-                   <h1 className="font-bold text-3xl mb-12 uppercase">Metalage</h1>
+                <img src="/footer_svg.svg" className="h-24" alt="" />
                 </div>
                 <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
                  <a className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/about">About</a>
