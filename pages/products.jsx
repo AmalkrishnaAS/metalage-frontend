@@ -32,7 +32,7 @@ const products = () => {
   console.log(products[0]?.attributes.image.data.attributes.formats.thumbnail.url);
   return (
       <>
-      <Navbar></Navbar>
+     
      
       <div className="flex flex-wrap justify-center mt-24 gap-5  sm:justify-start
       mx-3">

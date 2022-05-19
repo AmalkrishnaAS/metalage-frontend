@@ -3,11 +3,71 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Contact from '../components/Contact'
 import { DownloadIcon } from '@heroicons/react/outline'
+import { useRef } from 'react'
+import emailjs from 'emailjs-com'
+import { toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify' 
 
 const contact = () => {
+  const form=useRef(null)
+  const public_key=process.env.PUBLIC_KEY
+  const service_id=process.env.SERVICE_ID
+  const template_id=process.env.TEMPLATE_ID
+  console.log(public_key)
+  console.log(service_id)
+  console.log(template_id)
+ 
+  
+  
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+   
+
+    emailjs.sendForm('service_jbfds7n','template_mxoq58l', form.current, 'm5fRO52Uxq-OcMLsX')
+    
+      .then((result) => {
+        console.log(public_key);
+        toast.success('📨 Email Sent !', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
+         
+        
+      }, (error) => {
+        toast.error('Something went wrong', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
+      });
+    
+  };
+
   return (
     <>
-        <Navbar></Navbar>
+       
+        <ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
+
         
         <div className='h-auto w-screen relative flex-col flex space-y-4 mt-20  sm:flex-row '>
         <div className=' p-5 min-w-[40vw]'>
@@ -16,28 +76,34 @@ const contact = () => {
         </div>
         <div class="w-full md:w-96 "> 
   <div class="p-6 border bg-white rounded-xl shadow-md  m-5 md:min-w-[600px]">
-    <form method="POST" className='flex-col items-center space-y-4  '>
+    
+  
+    <form ref={form} className='flex-col items-center space-y-4  '>
       <h1 className='font-bold uppercase font-3xl '>Drop a Message</h1>
       <div>
             <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
             <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text" placeholder="" />
+              type="text" placeholder="" name='name' />
           </div>
       
           <div class="mt-8">
             <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
             <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text" />
+              type="text" name='email' />
           </div>
           <div class="mt-8">
             <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
             <textarea
-              class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+              class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name='message'></textarea>
           </div>
           <div class="mt-8">
-          <button class="group [transform:translateZ(0)] px-6 py-3 rounded-lg overflow-hidden bg-gray-200 relative before:absolute before:bg-blue-600 before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:rounded-full before:scale-[0] before:opacity-0 hover:before:scale-[6] hover:before:opacity-100 before:transition before:ease-in-out before:duration-500 flex mt-6 md:mt-0"><span class="  space-x-3relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500 uppercase flex justify-center items-center "> Send <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <label>
+              <input type="submit" className='hidden' />
+          <button onClick={sendEmail} class="group [transform:translateZ(0)] px-6 py-3 rounded-lg overflow-hidden bg-gray-200 relative before:absolute before:bg-blue-600 before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:rounded-full before:scale-[0] before:opacity-0 hover:before:scale-[6] hover:before:opacity-100 before:transition before:ease-in-out before:duration-500 flex mt-6 md:mt-0"><span class="  space-x-3relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500 uppercase flex justify-center items-center "> Send <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
   <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+
 </svg> </span></button >
+            </label>
             </div>
      
        

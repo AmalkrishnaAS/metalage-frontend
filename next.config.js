@@ -9,5 +9,10 @@ module.exports = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  env:{
+    PUBLIC_ID: process.env.PUBLIC_ID,
+    SERVICE_ID: process.env.SERVICE_ID,
+    TEMPLATE_ID: process.env.TEMPLATE_ID,
+  }
   
 }

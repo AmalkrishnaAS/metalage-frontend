@@ -4,6 +4,11 @@ import type { AppProps } from 'next/app'
 import AOS from '../components/lib/aos'
 import 'aos/dist/aos.css'
 import {useEffect} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  import {motion} from 'framer-motion'
+  import {useRouter} from 'next/router'
+  import Navbar from '../components/Navbar'
 
 //initialize AOS
 
@@ -15,9 +20,33 @@ function MyApp({ Component, pageProps }: AppProps) {
     })
   }
   , [])
+  const router = useRouter()
   
   
-  return <Component {...pageProps} />
+  return (
+    <>
+    <Navbar></Navbar>
+    <motion.div key={router.route} initial='hidden' animate='visible' variants={{
+      hidden:{
+        opacity:0,
+        
+      },
+      visible:{
+        opacity:1,
+      
+        transition:{
+          duration:0.5
+          
+        }
+
+
+        
+      
+      },
+    }}>
+  <Component {...pageProps} />
+  </motion.div>
+  </>)
 }
 
 export default MyApp
