@@ -34,11 +34,11 @@ const Hero = () => {
     <div className="hero h-3/4 min-h-[500px] items-center justify-center text-black md:flex">
       <motion.div class="flex h-[70%] flex-col items-center  justify-around md:h-[55%]" variants={heroVariants} initial={'hidden'} animate={'visible'}>
         <div className="mt-20 w-[90%] text-center text-white md:mt-6">
-          <h1 className="mb-6 mt-12 text-5xl font-bold  md:mt-0 font-serif ">
-            metalage technologies
+          <h1 className="mb-6 mt-12 text-5xl font-bold  md:mt-0 font-roboto  ">
+            Metalage Technologies
           </h1>{' '}
-          <p className="text-xl">
-            Providing Quality Food Processing Equipments since 2008
+          <p className="text-xl font-pacifico ">
+            Making Growth a sure thing since 2008.
           </p>
         </div>
         <a href='/brochure.pdf' target='_blank' class="group relative mt-6 flex overflow-hidden rounded-lg bg-gray-200 px-6 py-3 [transform:translateZ(0)] before:absolute before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:scale-[0] before:rounded-full before:bg-red-600 before:opacity-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-[6] hover:before:opacity-100 md:mt-0">

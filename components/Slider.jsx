@@ -13,9 +13,9 @@ const Slider = (props) => {
       </div>
       <div class="blog-slider__content">
 
-        <div class="blog-slider__title">{props.heading}</div>
+        <div class="blog-slider__title font-roboto">{props.heading}</div>
         <div class="blog-slider__text">{props.desc}</div>
-        <Link href='/products'><a  class="blog-slider__button">READ MORE</a></Link>
+        <Link href='/products'><a  class="blog-slider__button ">READ MORE</a></Link>
       </div>
     </div>
     

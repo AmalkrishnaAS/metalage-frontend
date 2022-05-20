@@ -4,7 +4,15 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        popins:['Popins', 'sans-serif'],
+        roboto: ['Roboto Mono', 'sans-serif'],
+        pacifico: ['Pacifico', 'cursive'],
+
+      },
+
+    },
   },
   plugins: [],
 }

@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
   import {motion} from 'framer-motion'
   import {useRouter} from 'next/router'
   import Navbar from '../components/Navbar'
+  import Head from 'next/head'
 
 //initialize AOS
 
@@ -25,7 +26,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <>
+    
     <Navbar></Navbar>
+    <Head>
+    <link rel="preconnect" href="https://fonts.googleapis.com " />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet" />
+    </Head>
     <motion.div key={router.route} initial='hidden' animate='visible' variants={{
       hidden:{
         opacity:0,
