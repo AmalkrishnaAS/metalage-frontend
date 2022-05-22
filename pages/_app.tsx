@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   
   return (
-    <>
+    <div className='min-w-screen'>
     <LoadingBar
         color='#0284c7'
         progress={progress}
@@ -81,7 +81,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }} className='w-screen h-screen'>
   <Component {...pageProps} />
   </motion.div>
-  </>)
+  </div>)
 }
 
 export default MyApp

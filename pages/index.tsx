@@ -10,7 +10,8 @@ import Footer from '../components/Footer'
 const Home: NextPage = () => {
   return (
     
-   <div className='w-screen'>
+   <div className=' flex flex-col items-center justify-center'>
+     {/* <Navbar></Navbar> */}
                                          
       <Hero></Hero>
       <Features></Features>

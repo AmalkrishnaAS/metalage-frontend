@@ -31,13 +31,13 @@ const Hero = () => {
     }
   }
   return (
-    <div className="hero h-3/4 min-h-[500px] items-center justify-center text-black md:flex">
+    <div className="hero  min-h-[500px] items-center justify-center text-black md:flex min-w-screen">
       <motion.div class="flex h-[70%] flex-col items-center  justify-around md:h-[55%]" variants={heroVariants} initial={'hidden'} animate={'visible'}>
-        <div className="mt-20 w-[90%] text-center text-white md:mt-6">
-          <h1 className="mb-6 mt-12 text-5xl font-bold  md:mt-0 font-roboto  ">
+        <div className="mt-20 w-[100%] text-center text-white md:mt-6 flex flex-col space-y-3 sm:space-y-8">
+          <h1 className="font-roboto font-extrabold text-3xl mt-6 sm:text-5xl   ">
             Metalage Technologies
           </h1>{' '}
-          <p className="text-xl font-pacifico ">
+          <p className="text-xl font-pacifico sm:text-2xl ">
             Making Growth a sure thing since 2008.
           </p>
         </div>
