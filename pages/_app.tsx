@@ -3,19 +3,34 @@ import type { AppProps } from 'next/app'
 //import aos
 import AOS from '../components/lib/aos'
 import 'aos/dist/aos.css'
-import {useEffect} from 'react'
+import {useEffect ,useState,useRef} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
   import {motion} from 'framer-motion'
   import {useRouter} from 'next/router'
   import Navbar from '../components/Navbar'
   import Head from 'next/head'
+  import LoadingBar from 'react-top-loading-bar'
+  
 
 //initialize AOS
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+ 
+  const [progress, setProgress] = useState(0)
   useEffect(() => {
+
+    //set progress to 100 on route change
+    //start progress bar
+    
+   router.events.on('routeChangeStart', () => {
+      setProgress(40)
+    })
+    router.events.on('routeChangeComplete', () => {
+      setProgress(100)
+    })
+  
     AOS.init({
       duration: 1000,
     })
@@ -26,7 +41,20 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <>
-    
+    <LoadingBar
+        color='#0284c7'
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+        loaderSpeed={300}
+        waitingTime={800}
+        shadowStyle={{
+          backgroundColor: '#0284c7',
+          boxShadow: '0px 0px 10px #0284c7',
+        }}
+        height={3}
+        shadow={true}
+
+      />
     <Navbar></Navbar>
     <Head>
     <link rel="preconnect" href="https://fonts.googleapis.com " />

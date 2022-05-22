@@ -7,7 +7,7 @@ const Product = ({product}) => {
     <div class="flex justify-center  ">
     <div class="rounded-lg shadow-lg bg-white w-[200px]   ">
       <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-        <img class="rounded-t-lg m-auto w-full max-h-[125px] object-contain bg-gray-200 " src={`${product.attributes.image.data.attributes.formats.thumbnail.url}`} alt={product.attributes.image.data.attributes.formats.thumbnail.url}/>
+        <img class="rounded-t-lg m-auto w-full max-h-[125px] object-contain bg-gray-200 " src={`${product.attributes.image?.data.attributes.formats.thumbnail.url||'/img-loader'}`} alt={product.attributes.image.data.attributes.formats.thumbnail.url}/>
       </a>
       <div class="p-6">
         <h5 class="text-gray-900 text-xl font-medium mb-2 uppercase">{product.attributes.name}</h5>
