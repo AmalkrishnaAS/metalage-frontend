@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         
       
       },
-    }}>
+    }} className='w-screen h-screen'>
   <Component {...pageProps} />
   </motion.div>
   </>)

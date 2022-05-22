@@ -9,8 +9,9 @@ import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
-    <>
-     <div></div>
+    
+   <div className='w-screen'>
+                                         
       <Hero></Hero>
       <Features></Features>
       <Slider heading='Food processing' desc='We offer a comprehensive line of technically advanced food processing and packaging machines.' img='/food.jpg'></Slider>
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
       <Footer></Footer>
       
       
-    </>
+    </div>
   )
 }
 

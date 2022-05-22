@@ -10,12 +10,12 @@ import { ToastContainer } from 'react-toastify'
 
 const contact = () => {
   const form=useRef(null)
-  const public_key=process.env.PUBLIC_KEY
-  const service_id=process.env.SERVICE_ID
-  const template_id=process.env.TEMPLATE_ID
-  console.log(public_key)
-  console.log(service_id)
-  console.log(template_id)
+  const public_key=process.env.NEXT_PUBLIC_PUBLIC_KEY
+  const service_id=process.env.NEXT_PUBLIC_SERVICE_ID
+  const template_id=process.env.NEXT_PUBLIC_TEMPLATE_ID
+  // console.log(public_key)
+  // console.log(service_id)
+  // console.log(template_id)
  
   
   
@@ -24,10 +24,10 @@ const contact = () => {
     e.preventDefault()
    
 
-    emailjs.sendForm('service_jbfds7n','template_mxoq58l', form.current, 'm5fRO52Uxq-OcMLsX')
+    emailjs.sendForm(service_id,template_id, form.current, public_key)
     
       .then((result) => {
-        console.log(public_key);
+        // console.log(public_key);
         toast.success('📨 Email Sent !', {
           position: "top-right",
           autoClose: 5000,
