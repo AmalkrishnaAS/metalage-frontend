@@ -6,7 +6,7 @@ import { HeartIcon } from '@heroicons/react/outline'
 
 const Features = () => {
   return (
-    <div className=" flex  h-[40%] w-screen flex-col justify-around md:w-[90vw] space-y-3 sm:flex-row items-center font-popins font-bold">
+    <div className=" flex  h-[40%] w-screen flex-wrap justify-around md:w-[90vw] space-y-3 sm:flex-row items-center font-popins font-bold">
       <div className=" space-y-3 text-center font-semibold uppercase flex flex-col  sm:m-0 space-y-0 ">
         <div className="flex h-[120px] w-[120px] items-center justify-center rounded-full bg-white mb-3"><ShieldCheckIcon className='h-16 text-gray-700'></ShieldCheckIcon></div>
         <h3 className='text-gray-700'>Quality Assured</h3>
