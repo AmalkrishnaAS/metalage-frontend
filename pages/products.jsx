@@ -35,7 +35,7 @@ const products = (props) => {
   return (
       <div className=''>
      
-      <div className="flex flex-wrap justify-center mt-24 gap-5  sm:justify-start
+      <div className="flex flex-wrap justify-center mt-24 gap-5 min-h-[300px]  sm:justify-start
       mx-3">
         
         {loading ? '' : (
