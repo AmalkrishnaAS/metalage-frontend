@@ -15,7 +15,7 @@ const Slider = (props) => {
 
         <div class="blog-slider__title font-roboto">{props.heading}</div>
         <div class="blog-slider__text">{props.desc}</div>
-        <Link href='/products'><a  class="blog-slider__button ">READ MORE</a></Link>
+        <Link href={props.path}><a  class="blog-slider__button ">READ MORE</a></Link>
       </div>
     </div>
     
