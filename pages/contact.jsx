@@ -8,7 +8,7 @@ import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
 import { ToastContainer } from 'react-toastify' 
 
-const contact = () => {
+const contact = (props) => {
   const form=useRef(null)
   const public_key=process.env.NEXT_PUBLIC_PUBLIC_KEY
   const service_id=process.env.NEXT_PUBLIC_SERVICE_ID
@@ -22,6 +22,7 @@ const contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault()
+    props.setProgress(20)
    
 
     emailjs.sendForm(service_id,template_id, form.current, public_key)
@@ -37,6 +38,7 @@ const contact = () => {
           draggable: true,
           progress: undefined,
           });
+        props.setProgress(100)
           e.target.reset()
          
         

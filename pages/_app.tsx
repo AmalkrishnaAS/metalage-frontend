@@ -79,7 +79,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       
       },
     }} className='w-screen h-screen'>
-  <Component {...pageProps} />
+  <Component {...pageProps} setProgress={setProgress} />
   </motion.div>
   </div>)
 }
