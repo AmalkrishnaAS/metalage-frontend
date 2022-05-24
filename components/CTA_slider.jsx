@@ -39,7 +39,7 @@ export default function App() {
         
         autoplay={
             {
-                delay: 9000,
+                delay: 5000,
                 disableOnInteraction: true
 
             }
@@ -57,21 +57,21 @@ export default function App() {
 
         
         modules={[Navigation, Pagination,EffectFade]}
-        className="w-full h-full  mt-5"
+        className="w-full h-full  "
         loop={true}
       >
           
             
-                <SwiperSlide  className='flex items-center w-full'>
+                <SwiperSlide  className='flex items-center '>
                   <CTA path='/products/1' title='Food Pocessing Equipments'  desc='We offer a comprehensive line of technically advanced food processing and packaging machines.' img1='/1img1.jpg' img2='food.jpg'></CTA>
                 </SwiperSlide>
-                <SwiperSlide  className='flex items-center w-full'>
+                <SwiperSlide  className='flex items-center '>
                   <CTA path='/products/2' title='Rice Powder Units' desc='Our engineers work in tandem with the clients to understand their requirements and provide feasible solutions for the specific process application' ></CTA>
                 </SwiperSlide>
                 <SwiperSlide  className='flex items-center w-full'>
                   <CTA path='/products/3' title='Ayurvedic Industry' desc='We are one of the leading supplier of a variety of Ayurvedic processing Machines and related Equipmenst required for Ayurvedic production'></CTA>
                 </SwiperSlide>
-                <SwiperSlide  className='flex items-center w-full'>
+                <SwiperSlide  className='flex items-center '>
                   <CTA path='/products/4' title='Hotels & Catering'  desc='We have adopted latest technologies available worldwide and collaborated with key international players.our plants ensure consistency in production of high quality products.'></CTA>
                 </SwiperSlide>
            
