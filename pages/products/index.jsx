@@ -6,6 +6,8 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Carousel from '../../components/Carousel'
 import Skeleton from '../../components/Skeleton'
+import Video from '../../components/Video'
+import CTA_slider from '../../components/CTA_slider'
 
 const products = (props) => {
   // const [products, setProducts] = useState([])
@@ -34,10 +36,13 @@ const products = (props) => {
   // }, [])
   
   return (
-      <div className=''>
+      <div className='mt-20'>
+         <CTA_slider />
      
       <div className="flex flex-wrap justify-center mt-24 gap-5 min-h-[300px]  sm:justify-start
       mx-3">
+       
+        
         
         {loading ? 
 (
@@ -55,6 +60,7 @@ const products = (props) => {
             ))
             )}
       </div>
+      {/* <Video></Video> */}
   
     <Footer></Footer>
             </div>
