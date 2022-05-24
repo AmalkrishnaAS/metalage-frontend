@@ -53,7 +53,7 @@ export default function App() {
         }
         
         cssMode={true}
-        navigation={true}
+        
         pagination={true}
         mousewheel={true}
         keyboard={true}
