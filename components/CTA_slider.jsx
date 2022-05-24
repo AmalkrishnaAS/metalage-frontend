@@ -6,15 +6,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import CTA from "./CTA";
 
 import "swiper/css";
-import "swiper/css/effect-coverflow"
-import "swiper/css/pagination"
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
+// import Swiper core and required modules
 import SwiperCore, {
-  Autoplay,
-  EffectCoverflow, Navigation, Pagination,EffectFade
-} from 'swiper';
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  EffectFade,
+  Autoplay
+} from "swiper";
 
-SwiperCore.use([EffectCoverflow, Pagination, Navigation, Autoplay]);
+
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard,Autoplay]);
 
 // import required modules
 
@@ -40,25 +47,28 @@ export default function App() {
         autoplay={
             {
                 delay: 5000,
-                disableOnInteraction: true
+                disableOnInteraction: false,
 
             }
         }
         
+        cssMode={true}
         navigation={true}
-
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
+        pagination={true}
+        mousewheel={true}
+        keyboard={true}
        fadeEffect={{
             crossFade: true
         }}
+        
+
       
 
         
-        modules={[Navigation, Pagination,EffectFade]}
+        modules={[Navigation, Pagination,EffectFade,Autoplay]}
         className="w-full h-full  "
         loop={true}
+        
       >
           
             

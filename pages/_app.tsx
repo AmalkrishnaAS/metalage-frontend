@@ -11,6 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
   import Navbar from '../components/Navbar'
   import Head from 'next/head'
   import LoadingBar from 'react-top-loading-bar'
+  import BackToTop from '../components/BackToTop'
   
 
 //initialize AOS
@@ -79,7 +80,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       
       },
     }} className='w-screen h-screen'>
+     <BackToTop></BackToTop>
   <Component {...pageProps} setProgress={setProgress} />
+  
   </motion.div>
   </div>)
 }
