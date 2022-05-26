@@ -11,7 +11,7 @@ const Footer = () => {
                 <img src="/footer_svg.svg" className="h-24" alt="" />
                 </div>
                 <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
-                 <a className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/about">About</a>
+                 <Link className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/about">About</Link>
                     <Link className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/products">Products</Link>
                     <Link className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/contact">Contact</Link>
                     <Link className="hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800" href="/">Home</Link>

@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect,useState } from 'react'
 import {useRouter} from 'next/router'
+import Link from 'next/link'
 
 const Product =  ({product}) => {
   const baseUrl = 'https://aqueous-retreat-57087.herokuapp.com/api'
@@ -22,9 +23,9 @@ const Product =  ({product}) => {
   }, [])
   console.log(altUrl)
   return (
-    <div className="flex justify-center max-h-[235px] ">
-    <div className="rounded-lg shadow-lg bg-white w-[200px]   ">
-      <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+    <div className="flex justify-center max-h-[260px] ">
+    <div className="rounded-lg shadow-lg bg-white w-[210px]   ">
+      <Link href={`/product/${product.id}`} ><a  data-mdb-ripple="true" data-mdb-ripple-color="light">
         <img
           src={product.attributes.image?.data.attributes.formats.thumbnail.url||altUrl}
           className="rounded-t-lg m-auto w-full max-h-[125px] object-contain bg-gray-200" 
@@ -32,9 +33,17 @@ const Product =  ({product}) => {
         />
         
       </a>
+      </Link>
       <div className="p-6">
         <h5 className="text-gray-900 text-xl font-medium mb-2 uppercase">{product.attributes.name}</h5>
-        <div className={`w-24 h-5 flex ${router.pathname==='/products'?'visible':'hidden'} items-center justify-center  bg-blue-600  rounded-lg text-[10px] text-white  capitalize`}>{product.attributes.category}</div>
+       <Link href={`/product/${product.id}`}><a
+    
+    data-mdb-ripple="true"
+    data-mdb-ripple-color="light"
+    class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+  >Read More</a>
+  </Link> 
+
         
       
       </div>
