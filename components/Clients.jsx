@@ -13,7 +13,7 @@ import SwiperCore, {
   EffectCoverflow, Navigation, Pagination
 } from 'swiper';
 
-SwiperCore.use([EffectCoverflow, Pagination, Navigation, Autoplay]);
+SwiperCore.use([EffectCoverflow, Pagination,  Autoplay]);
 
 // import required modules
 
