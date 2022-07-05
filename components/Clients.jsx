@@ -56,13 +56,13 @@ export default function App() {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
+        className="mySwiper "
         loop={true}
       >
           
             {clients.map((client, index) => (
-                <SwiperSlide key={index} className='flex items-center'>
-                    <img src={client} className='m-auto w-34 mb-6' alt="client" />
+                <SwiperSlide key={index} className='flex items-center min-h-34 mb-4'>
+                    <img src={client} className='m-auto w-34 mb-6 max-h-32' alt="client" />
                 </SwiperSlide>
             ))}
         
