@@ -18,6 +18,8 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+  
+  
  
   const [progress, setProgress] = useState(0)
   useEffect(() => {
@@ -42,6 +44,17 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <div className='min-w-screen'>
+      <Head>
+        <title>
+          {`Metalage Technologies | ${(router.pathname[1]?.toUpperCase() || 'Home')+router.pathname.slice(2).split('/')[0]}`}
+        </title>
+        <meta name="description" content="food processing machineries for enterprises and ventures of all types and scales" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="metal,metal age,metalage,machineries,technologies,pulverizer,Roaster,Impact pulverizer,Powder Roaster,Electric Roaster,LPG Roaster,Steam Roaster,Wibro Sifter,pulveriser,Impact pulveriser,Rice Washing,Food Processing,Food Processing Machines,Hammer Mill,Fruit Mill,Fruit Pulper,food,machineries,food processing,rice powder units,hotels,caterings,ayurveda,fruits,pickles,packaging,technology,mechanical,mechatronics,automation,industry,automation,industrial automatio,engineering,mechanical engineering" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
     <LoadingBar
         color='#0284c7'
         progress={progress}

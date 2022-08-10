@@ -32,7 +32,15 @@ export default function Navbar() {
 	return (
 		<nav className='fixed top-0 z-10 w-screen  bg-white flex items-center justify-between px-12 h-20 border-b border-gray-200 lg:px-8 md:px-6'>
 			<Link href='/' passHref>
-				<img src='http://metalage.net/img/21.png' className='h-14 cursor-pointer'></img>
+				<div className='flex space-x-3 justify-center items-center'>
+				<img src='/favicon.ico' className='h-9 cursor-pointer'></img>
+				<p
+				className='font-semibold text-2xl font-roboto text-gray-800' 
+				>
+					metalage
+				</p>
+				</div>
+				
 			</Link>
 			<ul className=' hidden md:flex items-center space-x-4 justify-end uppercase' >
 				{links.map((link, index) => (

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 const Slider = (props) => {
   return (
-    <div className='my-6' data-aos="fade-up">
+    <div className='my-12' data-aos="fade-up">
         <div className="blog-slider">
   <div className="blog-slider__wrap swiper-wrapper">
    

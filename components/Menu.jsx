@@ -53,10 +53,18 @@ export default function Menu({ show, onClose }) {
 		<AnimatePresence >
 		{show&&<motion.div className={`w-screen h-screen bg-white fixed top-0 left-0 ${show ? 'visible' : 'invisible'}`} variants={menuVariants} animate={show?'visible':'hidden'} exit='exit' initial='hidden'>
 			<div className='h-20 px-6 flex items-center justify-between border-b border-gray-200 '>
-				<Link href='/' passHref>
-					<img onClick={onClose} src='http://metalage.net/img/21.png' className='h-14 cursor-pointer ml-4'></img>
-				</Link>
-				<IoMdClose onClick={onClose} className='text-3xl hover:text-blue-600 active:text-black' />
+			<Link href='/' passHref>
+				<div className='flex space-x-3 justify-center items-center'>
+				<img src='/favicon.ico' className='h-9 cursor-pointer'></img>
+				<p
+				className='font-semibold text-2xl font-roboto text-gray-800' 
+				>
+					metalage
+				</p>
+				</div>
+				
+			</Link>
+				<IoMdClose onClick={onClose} className='text-3xl mr-5 hover:text-blue-600 active:text-black' />
 			</div>
 
 			<ul className='px-6 py-12 flex flex-col gap-6'>
@@ -90,6 +98,7 @@ export default function Menu({ show, onClose }) {
 							<FaYoutube className='text-2xl hover:text-red-600' />
 						</a>
 					</li>
+					
 				</div>
 			</ul>
 		</motion.div>}

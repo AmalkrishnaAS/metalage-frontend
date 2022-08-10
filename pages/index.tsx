@@ -7,6 +7,7 @@ import  Features  from '../components/Features'
 import Slider from '../components/Slider'
 import Footer from '../components/Footer'
 
+
 const Home: NextPage = () => {
   return (
     
