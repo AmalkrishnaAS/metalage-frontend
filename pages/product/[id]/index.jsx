@@ -60,7 +60,7 @@ const index = ({product}) => {
         </div>
         <div className="flex">
           
-        <button onClick={()=>{router.push('/products')}}  className="group text-gray-600 hover:text-sky-600 transition ease-in-out duration-200">Go Back <span aria-hidden="true" className="inline-block translate-x-0 group-hover:translate-x-1 transition-transform ease-in-out duration-200">&rarr;</span></button>
+        <button onClick={()=>{router.back()}}  className="group text-gray-600 hover:text-sky-600 transition ease-in-out duration-200">Go Back <span aria-hidden="true" className="inline-block translate-x-0 group-hover:translate-x-1 transition-transform ease-in-out duration-200">&rarr;</span></button>
     
         </div>
       </div>
