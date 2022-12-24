@@ -65,7 +65,7 @@ export default products
 //fetch data through getserverSideProps
 
 export async function getServerSideProps(context) {
-    const baseUrl = 'https://aqueous-retreat-57087.herokuapp.com/api'
+    const baseUrl = 'https://metalage-cms.onrender.com/api'
     const result = await axios(
         `${baseUrl}/sections/${context.params.id}?populate=*`
     )

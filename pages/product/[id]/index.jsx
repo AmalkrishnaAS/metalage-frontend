@@ -9,13 +9,15 @@ import Link from 'next/link'
 import {useRouter} from 'next/router'
 import Footer from '../../../components/Footer'
 import { useState } from 'react'
+import Dev from '../../../components/Dev'
 
 const index = ({product}) => {
  
     const router = useRouter()
     
   return (
-    <section className="text-gray-600 body-font overflow-hidden">
+    <div className=''>
+    {product?<section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-24 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
       <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-contain object-center rounded max-h-[400px] max-w-[400px] m-autoya" src={product.attributes.image?.data.attributes?.formats?.large?.url|| product.attributes.image?.data.attributes?.formats?.thumbnail?.url } />
@@ -66,20 +68,33 @@ const index = ({product}) => {
   </div>
   <Footer></Footer>
 </section>
+: <Dev/>
+}
+    </div>
   )
 }
 
 export default index
 
 export const getServerSideProps = async (context) => {
-    const baseUrl = 'https://aqueous-retreat-57087.herokuapp.com/api'
-    const result = await axios(
-        `${baseUrl}/products/${context.params.id}?populate=*`
-    )
-    return {
-        props: {
-        product: result.data.data
-        
-    }
-    }
+    const baseUrl = 'https://metalage-cms.onrender.com/api'
+    try {
+        const result = await axios(
+            `${baseUrl}/products/${context.params.id}?populate=*`
+        )
+        return {
+            props: {
+            product: result.data.data
+            
+        }
+        }
+    } catch (error) {
+
+        return {
+            props: {
+                product: null
+            }
+        }
+      }
+  
 }

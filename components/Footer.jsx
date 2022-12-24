@@ -37,7 +37,7 @@ const Footer = () => {
                 
             <li
             
-            ><a href="https://aqueous-retreat-57087.herokuapp.com/admin/auth/login" className="hover:text-gray-800 text-gray-400" target='_blank'>
+            ><a href="https://metalage-cms.onrender.com/admin/auth/login" className="hover:text-gray-800 text-gray-400" target='_blank'>
                Login
                 </a></li>
             <li

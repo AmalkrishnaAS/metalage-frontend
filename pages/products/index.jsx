@@ -6,7 +6,6 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Carousel from '../../components/Carousel'
 import Skeleton from '../../components/Skeleton'
-import Video from '../../components/Video'
 import CTA_slider from '../../components/CTA_slider'
 import SearchBar from '../../components/SearchBar'
 
@@ -66,7 +65,7 @@ const products = (props) => {
 export default products
 
 export const  getServerSideProps = async (ctx) => {
-  const baseUrl = 'https://aqueous-retreat-57087.herokuapp.com/api'
+  const baseUrl = 'https://metalage-cms.onrender.com/api'
   const result = await axios(`${baseUrl}/products?populate=*`)
   return {
     props: {

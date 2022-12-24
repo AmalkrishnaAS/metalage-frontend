@@ -5,7 +5,7 @@ import {useRouter} from 'next/router'
 import Link from 'next/link'
 
 const Product =  ({product}) => {
-  const baseUrl = 'https://aqueous-retreat-57087.herokuapp.com/api'
+  const baseUrl = 'https://metalage-cms.onrender.com/api'
   const id=product.id
   const [altUrl, setAltUrl] = useState('/loading.gif')
   const router = useRouter()
@@ -55,7 +55,7 @@ const Product =  ({product}) => {
 export default Product
 
 export async function getServerSideProps(context) {
-  const baseUrl = 'https://aqueous-retreat-57087.herokuapp.com/api'
+  const baseUrl = 'https://metalage-cms.onrender.com/api'
   const result = await axios(
       `${baseUrl}/products/1?populate=*`
   )
