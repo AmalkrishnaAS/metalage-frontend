@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   
   return (
-    <div className='min-w-screen'>
+    <div className='min-w-screen relative'>
       <Head>
         <title>
           {`Metalage Technologies | ${(router.pathname[1]?.toUpperCase() || 'Home')+router.pathname.slice(2).split('/')[0]}`}

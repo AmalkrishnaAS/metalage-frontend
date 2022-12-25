@@ -19,6 +19,7 @@ SwiperCore.use([EffectCoverflow, Pagination,  Autoplay]);
 
 
 const clients=[
+    'clients/avs.png',
     '/clients/avt.png',
     '/clients/bramhins.png',
 '/clients/doublehorse.png',
@@ -28,6 +29,7 @@ const clients=[
 '/clients/plantlipids.png',
 '/clients/shahioman.png',
 '/clients/synthite.png',
+'/clients/palat.png',
 ]
 
 export default function App() {
@@ -35,7 +37,9 @@ export default function App() {
     <div className="flex items-center justify-center w-2/3 mt-6">
       
       <Swiper
-        effect={"coverflow"}
+     
+      spaceBetween={30}
+        
         autoplay={
             {
                 delay: 3000,
@@ -46,14 +50,16 @@ export default function App() {
         navigation={true}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={"auto"}
+        slidesPerView={3}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
           slideShadows: true,
+          
         }}
+        
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper "

@@ -30,7 +30,7 @@ const Contact = () => {
 
         </div>
         <a href="mailto:info@metalage.net" target={'_blank'}>
-        <span className='text-gray-600 font-semibold'>info@metalage.net</span>
+        <span className='text-gray-600 font-semibold'>infometalage@gmail.com</span>
         </a>
        
       </div>

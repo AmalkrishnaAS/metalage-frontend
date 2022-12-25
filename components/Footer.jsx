@@ -8,12 +8,16 @@ from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer class="w-full p-4 mt-6 bg-white rounded-lg shadow md:px-6 md:py-8 ">
+        <footer class="w-full p-4  bg-white rounded-lg shadow md:px-6 md:py-8 relative mt-10 bottom-0  ">
     <div class="sm:flex sm:items-center sm:justify-between">
         <Link href="/" class="flex items-center mb-4 sm:mb-0">
             <div className="flex cursor-pointer mb-4  md:mb-0">
             <img src="/favicon.ico" class="mr-3 h-8" alt="Flowbite Logo" />
+            <div className="flex flex-col ">
+
             <span class="self-center text-2xl font-semibold whitespace-nowrap  font-roboto">metalage</span>
+            <span className=" text-xs font-popins text-blue-400 tracking-widest  uppercase">technologies</span>
+            </div>
             </div>
             
         </Link>
