@@ -53,17 +53,17 @@ export default function Menu({ show, onClose }) {
 		<AnimatePresence >
 		{show&&<motion.div className={`w-screen h-screen bg-white fixed top-0 left-0 ${show ? 'visible' : 'invisible'}`} variants={menuVariants} animate={show?'visible':'hidden'} exit='exit' initial='hidden'>
 			<div className='h-20 px-6 flex items-center justify-between border-b border-gray-200 '>
-			<Link href='/' passHref>
-				<div className='flex space-x-3 justify-center items-center'>
-				<img src='/favicon.ico' className='h-9 cursor-pointer'></img>
-				<p
-				className='font-semibold text-2xl font-roboto text-gray-800' 
-				>
-					metalage
-				</p>
-				</div>
-				
-			</Link>
+			<Link href="/" class="flex items-center justify-center  pt-6">
+            <div className="flex cursor-pointer   md:mb-0">
+            <img src="/favicon.ico" class="mr-3 h-8" alt="Flowbite Logo" />
+            <div className="flex flex-col ">
+
+            <span class="self-center text-2xl font-semibold whitespace-nowrap  font-roboto">metalage</span>
+            <span className=" text-xs font-popins text-blue-400 tracking-widest  uppercase">technologies</span>
+            </div>
+            </div>
+            
+        </Link>
 				<IoMdClose onClick={onClose} className='text-3xl mr-5 hover:text-blue-600 active:text-black' />
 			</div>
 
