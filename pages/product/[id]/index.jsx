@@ -76,7 +76,7 @@ const index = ({product}) => {
 
 export default index
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
     const baseUrl = 'https://metalage-cms.onrender.com/api'
     try {
         const result = await axios(

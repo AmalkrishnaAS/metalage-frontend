@@ -30,6 +30,7 @@ const products = (props) => {
   
   return (
       <div className=''>
+        
      
       <div className="flex flex-wrap justify-center mt-24 gap-5 min-h-[300px]  sm:justify-start
       mx-3">
@@ -62,9 +63,9 @@ const products = (props) => {
 export default products
 
 
-//fetch data through getserverSideProps
+//fetch data through getStaticProps
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
     const baseUrl = 'https://metalage-cms.onrender.com/api'
     const result = await axios(
         `${baseUrl}/sections/${context.params.id}?populate=*`
