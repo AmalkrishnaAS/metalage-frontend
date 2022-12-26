@@ -65,7 +65,7 @@ export default products
 
 //fetch data through getStaticProps
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const baseUrl = 'https://metalage-cms.onrender.com/api'
     const result = await axios(
         `${baseUrl}/sections/${context.params.id}?populate=*`
@@ -78,6 +78,7 @@ export async function getStaticProps(context) {
     return {
         props: {
         products: result.data.data.attributes.products.data,
+      
         
 
         }
